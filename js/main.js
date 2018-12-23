@@ -115,24 +115,27 @@
 	});
 
 
+    var SKILL_LABELS=['Python Programming', 
+                  'Enterprise & Solution Architecture', 
+                  'Data Engineering & Big Data',
+                  'Data Science & AI', 
+                  'Free & Open Source Software',
+                  'Web Development',
+                  'Martial Art',
+                  'Training Development',
+                  'Operations Management',
+                  'Marketing & Developer Evangelism',
+                  'Cybersecurity'];
+    var SKILL_VALUES=[90,70,70, 40,90,70,60,70,65,60,55];
+
     $('#profile-radar').ready(function (){
         var myRadarChart = new Chart($('#profile-radar'), {
             type: 'radar',
             data: {
-                labels: ['Python Programming', 
-                         'Enterprise & Solution Architecture', 
-                         'Data Engineering & Big Data',
-                         'Data Science & AI', 
-                         'Free & Open Source Software',
-                         'Web Development',
-                         'Martial Art',
-                         'Training Development',
-                         'Operations Management',
-                         'Marketing & Developer Evangelism',
-                         'Cybersecurity'],
+                labels: SKILL_LABELS,
                 datasets: [{
                     label: '',
-                    data: [90,70,70, 40,90,70,60,70,65,60,55],
+                    data: SKILL_VALUES,
                     backgroundColor: '#285D8B50',
                     borderColor: '#285D8B',
                     borderWidth: 2,
@@ -156,6 +159,17 @@
                     }
                 }
             }
+        });
+    });
+
+
+    $('#profile-hbar').ready(function () {
+        var skill_map = SKILL_LABELS.map(function(v, i) {
+            return [v, SKILL_VALUES[i]];
+        });
+
+        skill_map.map(function (v) {
+            $('#profile-hbar').append(`<span>${v[0]}</span><div class="progress"><div class="progress-bar" role-"progressbar" style="width: ${v[1]}%;" aria-valuenow="${v[1]}" aria-valuemin="0" aria-valuemax="100"></div>`);
         });
     });
     

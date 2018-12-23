@@ -1,0 +1,24 @@
+@media only screen and (max-width: 600px) {
+    #profile-radar {
+        display: none !important;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width:991px) {
+    #profile-radar {
+        display: none !important;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    #profile-hbar {
+        display: none !important;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #profile-hbar {
+        display: none !important;
+    }
+}
