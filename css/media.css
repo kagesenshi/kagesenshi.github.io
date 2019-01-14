@@ -2,6 +2,16 @@
     #profile-radar {
         display: none !important;
     }
+
+    .counter-ico .ico-circle {
+        margin-top:15px;
+        margin-bottom:15px;
+    }
+
+    .section-counter {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
 }
 
 
@@ -14,6 +24,16 @@
 @media only screen and (min-width: 600px) and (max-width: 767px) {
     #profile-hbar {
         display: none !important;
+    }
+
+    .counter-ico .ico-circle {
+        margin-top:15px;
+        margin-bottom:15px;
+    }
+
+    .section-counter {
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 }
 
